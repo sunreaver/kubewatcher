@@ -6,12 +6,13 @@ import (
 	"kubewatcher/sender"
 	"kubewatcher/util"
 	"log/slog"
+	"os"
 )
 
 func main() {
 	kubewatcher.SetLogLevel(slog.LevelError)
 
-	cfg, err := kubewatcher.MakeRestConfigByKubeconfigPath("https://k8s-master:38663", "~/.kube/config")
+	cfg, err := kubewatcher.MakeRestConfigByKubeconfigPath(os.Getenv("KUBE_HOST"), os.Getenv("KUBE_CONFIG"))
 	if err != nil {
 		panic(err.Error())
 	}
