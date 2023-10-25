@@ -2,11 +2,12 @@ package main
 
 import (
 	"context"
-	"kubewatcher"
-	"kubewatcher/sender"
-	"kubewatcher/util"
 	"log/slog"
 	"os"
+
+	"github.com/sunreaver/kubewatcher"
+	"github.com/sunreaver/kubewatcher/sender"
+	"github.com/sunreaver/kubewatcher/util"
 )
 
 func main() {

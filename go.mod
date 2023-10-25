@@ -1,4 +1,4 @@
-module kubewatcher
+module github.com/sunreaver/kubewatcher
 
 go 1.21
 

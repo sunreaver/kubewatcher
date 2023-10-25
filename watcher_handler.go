@@ -2,12 +2,12 @@ package kubewatcher
 
 import (
 	"context"
-	"kubewatcher/constant"
-	"kubewatcher/controller"
-	"kubewatcher/resource"
-	sender2 "kubewatcher/sender"
-	"kubewatcher/util"
 
+	"github.com/sunreaver/kubewatcher/constant"
+	"github.com/sunreaver/kubewatcher/controller"
+	"github.com/sunreaver/kubewatcher/resource"
+	sender2 "github.com/sunreaver/kubewatcher/sender"
+	"github.com/sunreaver/kubewatcher/util"
 	appv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 )

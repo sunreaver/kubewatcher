@@ -2,11 +2,11 @@ package kubewatcher
 
 import (
 	"context"
-	"kubewatcher/controller"
-	"kubewatcher/resource"
-	"kubewatcher/sender"
 
 	"github.com/pkg/errors"
+	"github.com/sunreaver/kubewatcher/controller"
+	"github.com/sunreaver/kubewatcher/resource"
+	"github.com/sunreaver/kubewatcher/sender"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/tools/cache"
 )

@@ -3,10 +3,10 @@ package controller
 import (
 	"context"
 	"fmt"
-	"kubewatcher/constant"
-	"kubewatcher/resource"
-	"kubewatcher/util"
 
+	"github.com/sunreaver/kubewatcher/constant"
+	"github.com/sunreaver/kubewatcher/resource"
+	"github.com/sunreaver/kubewatcher/util"
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/client-go/util/workqueue"
 )

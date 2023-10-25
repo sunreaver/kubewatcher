@@ -2,9 +2,9 @@ package controller
 
 import (
 	"context"
-	"kubewatcher/constant"
-	"kubewatcher/resource"
 
+	"github.com/sunreaver/kubewatcher/constant"
+	"github.com/sunreaver/kubewatcher/resource"
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/client-go/util/workqueue"
 )

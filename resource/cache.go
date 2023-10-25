@@ -1,11 +1,11 @@
 package resource
 
 import (
-	"kubewatcher/constant"
-	"kubewatcher/sender"
-	"kubewatcher/util"
 	"sync"
 
+	"github.com/sunreaver/kubewatcher/constant"
+	"github.com/sunreaver/kubewatcher/sender"
+	"github.com/sunreaver/kubewatcher/util"
 	"golang.org/x/exp/slices"
 )
 

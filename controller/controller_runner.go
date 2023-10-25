@@ -2,10 +2,10 @@ package controller
 
 import (
 	"context"
-	"kubewatcher/resource"
-	"kubewatcher/util"
 	"time"
 
+	"github.com/sunreaver/kubewatcher/resource"
+	"github.com/sunreaver/kubewatcher/util"
 	k8sruntime "k8s.io/apimachinery/pkg/util/runtime"
 	"k8s.io/apimachinery/pkg/util/wait"
 	"k8s.io/client-go/tools/cache"

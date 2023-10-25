@@ -1,8 +1,9 @@
 package kubewatcher
 
 import (
-	"kubewatcher/util"
 	"log/slog"
+
+	"github.com/sunreaver/kubewatcher/util"
 )
 
 // 设置包内日志

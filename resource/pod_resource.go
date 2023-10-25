@@ -1,11 +1,11 @@
 package resource
 
 import (
-	"kubewatcher/constant"
-	"kubewatcher/util"
 	"strings"
 
 	"github.com/pkg/errors"
+	"github.com/sunreaver/kubewatcher/constant"
+	"github.com/sunreaver/kubewatcher/util"
 	v12 "k8s.io/api/apps/v1"
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/client-go/tools/cache"

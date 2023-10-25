@@ -1,12 +1,13 @@
 package kubewatcher
 
 import (
-	"kubewatcher/constant"
-	cpkg "kubewatcher/controller"
-	"kubewatcher/resource"
-	"kubewatcher/sender"
-	"kubewatcher/util"
 	"strings"
+
+	"github.com/sunreaver/kubewatcher/constant"
+	cpkg "github.com/sunreaver/kubewatcher/controller"
+	"github.com/sunreaver/kubewatcher/resource"
+	"github.com/sunreaver/kubewatcher/sender"
+	"github.com/sunreaver/kubewatcher/util"
 )
 
 func handler(queueKey string, value resource.ResourceInter, controller cpkg.K8sController, sdGetter sender.SenderGetter) error {

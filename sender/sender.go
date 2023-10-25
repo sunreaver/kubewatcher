@@ -2,7 +2,8 @@ package sender
 
 import (
 	"context"
-	"kubewatcher/constant"
+
+	"github.com/sunreaver/kubewatcher/constant"
 )
 
 // 各字段与cache.go中基本一致

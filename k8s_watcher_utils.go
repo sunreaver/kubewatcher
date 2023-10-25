@@ -2,10 +2,10 @@ package kubewatcher
 
 import (
 	"context"
-	"kubewatcher/util"
 	"time"
 
 	"github.com/pkg/errors"
+	"github.com/sunreaver/kubewatcher/util"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/client-go/informers"
 	"k8s.io/client-go/kubernetes"
