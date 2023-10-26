@@ -6,7 +6,6 @@ import (
 
 	"github.com/sunreaver/kubewatcher/resource"
 	"github.com/sunreaver/kubewatcher/util"
-	k8sruntime "k8s.io/apimachinery/pkg/util/runtime"
 	"k8s.io/apimachinery/pkg/util/wait"
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/client-go/util/workqueue"
@@ -46,18 +45,20 @@ func (cr *ControllerRunner) processNextItem(ctx context.Context) bool {
 当处理key发生错误时重试
 */
 func (cr *ControllerRunner) handleErr(err error, key interface{}) {
+	const times = 5
 	c := cr.Controller
 	cqueue := c.GetQueue()
 	if err == nil {
 		cqueue.Forget(key)
 		return
 	}
-	if cqueue.NumRequeues(key) < 5 { // 允许重试5次
+	if cqueue.NumRequeues(key) < times { // 允许重试5次
 		cqueue.AddRateLimited(key)
 		return
 	}
 	cqueue.Forget(key)
-	k8sruntime.HandleError(err)
+	// k8sruntime.HandleError(err)
+	util.Warnw("handler_err", "key", key, "times", times, "error", err)
 }
 
 func (cr *ControllerRunner) runWorker(ctx context.Context) {
